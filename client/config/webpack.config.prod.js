@@ -193,6 +193,11 @@ module.exports = {
                         ident: 'postcss',
                         plugins: () => [
                           require('postcss-flexbugs-fixes'),
+                          require('postcss-import'),
+                          require('postcss-flexbugs-fixes'),
+                          require('postcss-nested'),
+                          require('postcss-simple-vars'),
+                          require('postcss-hexrgba'),
                           autoprefixer({
                             browsers: [
                               '>1%',

@@ -1,27 +1,100 @@
+@import "styles/modules/_navbar";
+@import "styles/modules/_results";
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #422844;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
-  &-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+  background-image: url('./images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 32px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   }
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.headline {
+  max-width: 30%;
+  max-height: 10%;
+  height: 250px;
+  width: 500px;
+  /* background: #ffffff; */
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__searchbar {
+    margin-top: 32px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    button {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border: none;
+      padding: 12px 16px 12px 16px;
+      box-shadow: 0 1px 3px 0 #D0D5DB;
+      background-image: linear-gradient(-180deg, #20E6A4 2%, #20E6C5 100%);
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+      outline: 0;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      z-index: 5;
+    }
+    input {
+      box-shadow: 0 1px 3px 0 #D0D5DB;
+      padding: 12px 0 12px 8px;
+      border-radius: 3px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border: 1px solid transparent;
+      width: 100%;
+      font-size: 16px;
+      color: #422844;
+      outline: 0;
+      position: relative;
+      z-index: 5;
+    }
+    &__matches {
+      position: absolute;
+      background: white;
+      width: 100%;
+      // padding: 30px;
+      max-height: 293px;
+      overflow: hidden;
+      top: 40.3px;
+      z-index: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      box-shadow: 0 1px 3px 0 #D0D5DB;
+      ul {
+        padding: 0px;
+      }
+      li {
+        list-style-type: none;
+        text-align: left;
+        padding: 4px 0px 4px 8px;
+        cursor: pointer;
+        &:hover {
+          background: rgba(40, 21, 42, 0.1);
+        }
+      }
+    }
+  }
 }

@@ -173,10 +173,9 @@ module.exports = {
                   // https://github.com/facebookincubator/create-react-app/issues/2677
                   ident: 'postcss',
                   plugins: () => [
+                    require('postcss-import'),
                     require('postcss-flexbugs-fixes'),
                     require('postcss-nested'),
-                    require('postcss-import'),
-                    require('postcss-cssnext'),
                     require('postcss-simple-vars'),
                     require('postcss-hexrgba'),
                     autoprefixer({
